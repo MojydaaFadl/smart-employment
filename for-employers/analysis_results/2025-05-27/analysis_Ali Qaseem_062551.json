@@ -1,0 +1,27 @@
+{
+  "candidate_info": {
+    "full_name": "Ali Qaseem",
+    "email": "ali2@gmail.com",
+    "phone_number": "+967 2321321213221",
+    "location": "Dikhil, Djibouti"
+  },
+  "work_experience": [],
+  "skills_analysis": {
+    "laravel": "Beginner",
+    "cass": "Intermediate",
+    "html": "Expert"
+  },
+  "education": {
+    "degree": "High School or equivalent",
+    "institution": "Not available",
+    "graduation_year": "Not available",
+    "field_of_study": "it"
+  },
+  "summary": {
+    "languages": [
+      "Arbic (Native)"
+    ]
+  },
+  "cv_path": "../uploads/cvs/cv_20_1748233930.pdf",
+  "matching_score": 0
+}

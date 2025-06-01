@@ -1,0 +1,149 @@
+@font-face {
+    font-family: "Cairo";
+    src: url("../../fonts/Cairo\ Regular\ 400.ttf");
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Cairo';
+    text-align: right;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding-top: 0;
+    padding-bottom: 10px;
+    height: 3.5em;
+    z-index: 10;
+}
+
+.navbar-brand {
+    color: #000;
+}
+
+.navbar-brand:hover {
+    color: #000;
+}
+
+.navbar-brand-sec {
+    position: relative;
+    top: 20px;
+    left: 50px;
+    bottom: 10px;
+    font-size: small;
+    color: #007bff;
+}
+
+.open-btn {
+    font-size: 1.5rem;
+    color: #000;
+    cursor: pointer;
+}
+
+.sidebar {
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidebar>a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000;
+    display: block;
+    transition: 0.5s;
+}
+
+.sidebar>a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar-header .close-btn {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #636363;
+}
+
+.sidebar-header .menu-btn {
+    font-size: 1.2rem;
+    padding-left: 10px;
+    cursor: pointer;
+    color: #636363;
+}
+
+.sidebar-buttons {
+    padding: 10px 15px;
+}
+
+.sidebar-buttons .btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* أنماط جديدة للقائمة المنسدلة */
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-btn {
+    width: 100%;
+    text-align: right;
+    padding: 5px 15px;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-btn i {
+    margin-left: 10px;
+    transition: transform 0.25s ease;
+    color: #636363;
+}
+
+.dropdown-btn.active i {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    display: none;
+    padding-right: 20px;
+    background-color: #f8f9fa;
+    transition: all 0.25s ease;
+}
+
+.dropdown-content a {
+    font-size: smaller;
+    padding: 8px 15px;
+    display: block;
+    color: #333;
+    transition: all 0.25s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #e9ecef;
+}

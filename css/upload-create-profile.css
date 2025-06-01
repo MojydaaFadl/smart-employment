@@ -1,0 +1,201 @@
+@font-face {
+    font-family: "Cairo";
+    src: url("fonts/Cairo\ Regular\ 400.ttf");
+}
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Cairo';
+    text-align: right;                        
+}
+
+.navbar {
+    background-color: #007bff;
+}
+
+.navbar-brand {
+    color: #fff !important;
+}
+
+.page-title {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    padding-top: 20px;
+}
+
+
+.option-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 15px 20px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.option-card h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.option-card p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.divider {
+    border-top: 1px solid #ddd;
+    margin: 25px 15px;
+}
+
+.privacy-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 15px;
+    padding: 0 15px;
+}
+
+.privacy-links a {
+    color: #7f8c8d;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.privacy-links a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}       
+
+.copyright {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 14px;
+    margin: 20px 15px;
+    padding: 0 15px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* أنماط جديدة لصندوق رفع الملف */
+.upload-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-container {
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.upload-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-header h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.upload-body {
+    border: 2px dashed #ccc;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.upload-body:hover {
+    border-color: #007bff;
+    background-color: #f8f9fa;
+}
+
+.file-info {
+    margin-top: 15px;
+    color: #555;
+    font-size: 14px;
+}
+
+.upload-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+#fileInput {
+    display: none;
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 576px) {
+    .privacy-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .option-card {
+        padding: 15px;
+    }
+    
+    .upload-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .upload-actions button {
+        width: 100%;
+    }
+}

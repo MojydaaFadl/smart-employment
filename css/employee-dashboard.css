@@ -1,0 +1,796 @@
+@font-face {
+  font-family: "Cairo";
+  src: url("../fonts/Cairo\ Regular\ 400.ttf");
+}
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Cairo';
+  text-align: right;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #007bff;
+  border-bottom: 1px solid #eee;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 3.5em;
+}
+
+.navbar-brand {
+  color: #fff;
+}
+
+
+.open-btn {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sidebar {
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidebar>a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #000;
+  display: block;
+  transition: 0.5s;
+}
+
+.sidebar>a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar-header .close-btn {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #636363;
+}
+
+.sidebar-header .menu-btn {
+  font-size: 1.2rem;
+  padding-left: 10px;
+  cursor: pointer;
+  color: #636363;
+}
+
+.sidebar-buttons {
+  padding: 10px 15px;
+}
+
+.sidebar-buttons .btn {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* أنماط جديدة للقائمة المنسدلة */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-btn {
+  width: 100%;
+  text-align: right;
+  padding: 5px 15px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-btn i {
+  margin-left: 10px;
+  transition: transform 0.25s ease;
+  color: #636363;
+}
+
+.dropdown-btn.active i {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  display: none;
+  padding-right: 20px;
+  background-color: #f8f9fa;
+  transition: all 0.25s ease;
+}
+
+.dropdown-content a {
+  font-size: smaller;
+  padding: 8px 15px;
+  display: block;
+  color: #333;
+  transition: all 0.25s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #e9ecef;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav p {
+  height: 100%;
+  width: 33.33%;
+  text-align: center;
+  background-color: #fff;
+  border: none;
+  margin: 0 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav p:hover {
+  background-color: #f0f0f0;
+}
+
+.nav p.active {
+  color: white;
+  background-color: #007bff;
+}
+
+.content-section {
+  width: 100%;
+  background-color: transparent;
+  display: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-section.active {
+  display: block;
+}
+
+/* تنسيقات قسم البحث */
+.search-hero {
+  background-color: #fff;
+  padding: 40px 0 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-hero p {
+  margin-bottom: 50px;
+}
+
+.search-input input {
+  width: 100%;
+  height: 50px;
+  padding: 12px;
+  border: 1px solid #868686;
+  border-radius: 6px;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+
+.search-select {
+  margin-top: -10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.country-select {
+  width: 74%;
+  height: 50px;
+  padding: 12px 40px 12px 15px;
+  border: 1px solid #868686;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: white;
+  cursor: pointer;
+  appearance: none;
+  /* لإزالة المظهر الافتراضي */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-align: right;
+}
+
+/* إضافة أيقونة السهم */
+.search-select {
+  position: relative;
+}
+
+.search-select::after {
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 28%;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+}
+
+.search-btn {
+  width: 25%;
+  height: 50px;
+}
+
+/* أنماط جديدة للقائمة المنسدلة الكاملة */
+.fullpage-select-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  display: none;
+}
+
+.fullpage-select-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 2001;
+  display: none;
+}
+
+.select-header {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-search {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.select-search input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.select-options {
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+.select-option {
+  padding: 15px;
+  border-bottom: 1px solid #f5f5f5;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.select-option:hover {
+  background-color: #f8f9fa;
+}
+
+.select-option.selected {
+  background-color: #e3f2fd;
+  color: #007bff;
+}
+
+.close-select {
+  cursor: pointer;
+  color: #007bff;
+  font-size: 20px;
+}
+
+/* أنماط بطاقات الوظائف */
+.job-card {
+  border-radius: 12px;
+  border: 1px #eee solid;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+  margin-bottom: 20px;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.job-card .card-body {
+  padding: 25px;
+}
+
+.job-card h5 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.job-card .badge {
+  background: #e3f2fd;
+  color: #007bff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: normal;
+  margin-right: 5px;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.skills-tags .badge {
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+.search-results {
+  margin-top: 30px;
+}
+
+.search-results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.no-results i {
+  font-size: 50px;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.empty-state i {
+  font-size: 50px;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.empty-state h4 {
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.divider::before {
+  margin-right: 10px;
+}
+
+.divider::after {
+  margin-left: 10px;
+}
+
+/* أنماط Bottom Sheet */
+.bottom-sheet-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+}
+
+.bottom-sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.bottom-sheet.show {
+  transform: translateY(0);
+}
+
+.bottom-sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.bottom-sheet-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  align-items: center;
+}
+
+.bottom-sheet-item i {
+  margin-left: 10px;
+  color: #666;
+  width: 24px;
+  text-align: center;
+}
+
+.bottom-sheet-item:last-child {
+  border-bottom: none;
+}
+
+/* تعديلات لقسم الوظائف المتقدم لها */
+#section1 .row {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+#section1 .col-md-6,
+#section1 .col-lg-4 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#section1 .job-card {
+  margin-bottom: 20px;
+}
+
+/* تعديلات للبطاقات لتكون متساوية في الارتفاع */
+#section1 .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#section1 .card-body ul {
+  flex-grow: 1;
+}
+
+/* أنماط الرسائل المعدلة */
+.message-container {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  left: 0;
+  z-index: 1050;
+  padding: 0 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.custom-alert {
+  position: relative;
+  padding: 15px 40px 15px 15px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  animation: slideIn 0.3s forwards, fadeIn 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+}
+
+.custom-alert .close-btn {
+  position: absolute;
+  left: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.custom-alert .close-btn:hover {
+  opacity: 1;
+}
+
+.custom-alert i {
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.alert-success {
+  color: #0f5132;
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+}
+
+.alert-info {
+  color: #055160;
+  background-color: #cff4fc;
+  border-color: #b6effb;
+}
+
+.alert-warning {
+  color: #664d03;
+  background-color: #fff3cd;
+  border-color: #ffecb5;
+}
+
+.alert-danger {
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+}
+
+/* أنماط نافذة التعليقات */
+.comments-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  display: none;
+}
+
+.comments-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 2001;
+  display: none;
+  flex-direction: column;
+}
+
+.comments-header {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comments-body {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.comment-item {
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.comment-author {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.comment-text {
+  margin: 8px 0;
+  color: #333;
+  line-height: 1.5;
+  padding: 8px 0;
+}
+
+.comment-time {
+  font-size: 12px;
+  color: #6c757d;
+  text-align: left;
+}
+
+.comment-input {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  padding: 15px;
+}
+
+.comment-input input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  margin-left: 10px;
+}
+
+.comment-input button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment-input button:hover {
+  background: #0069d9;
+}
+
+/* أيقونة الـ chatbot */
+.chatbot-icon {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  background-color: #4285f4;
+  border-radius: 50%;
+  border: 5px solid #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.chatbot-icon:hover {
+  background-color: #3367d6;
+  transform: scale(1.1);
+}
+
+.chatbot-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+/* تنسيقات الوصف الوظيفي  */
+.job-description {
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  margin-top: 15px;
+}
+
+.job-description h6 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.job-description p {
+  color: #495057;
+  line-height: 1.6;
+}
+
+#loadMoreBtn {
+    padding: 10px 30px;
+    margin: auto;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#loadMoreBtn:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+#loadMoreBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}

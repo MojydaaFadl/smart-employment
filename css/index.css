@@ -1,0 +1,202 @@
+/* تنسيقات قسم البحث */
+.search-hero {
+    background-color: #fff;
+    padding: 40px 0 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.search-hero p {
+    margin-bottom: 50px;
+}
+
+.search-input input {
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    border: 1px solid #868686;
+    border-radius: 6px;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+.search-select {
+    margin-top: -10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.country-select {
+    width: 74%;
+    height: 50px;
+    padding: 12px 40px 12px 15px;
+    /* تعديل الحشو لإفساح مكان للأيقونة */
+    border: 1px solid #868686;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    appearance: none;
+    /* لإزالة المظهر الافتراضي */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align: right;
+}
+
+/* إضافة أيقونة السهم */
+.search-select {
+    position: relative;
+}
+
+.search-select::after {
+    content: "\f078";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    transform: translateY(-50%);
+    color: #777;
+    pointer-events: none;
+}
+
+.search-btn {
+    width: 25%;
+    height: 50px;
+}
+
+.popular-searches {
+    margin-right: 0.5rem;
+}
+
+.popular-searches h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.popular-searches .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.popular-searches .tag {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* أنماط جديدة للقائمة المنسدلة الكاملة */
+.fullpage-select-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    display: none;
+}
+
+.fullpage-select-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 2001;
+    display: none;
+}
+
+.select-header {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-search {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.select-search input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.select-options {
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+.select-option {
+    padding: 15px;
+    border-bottom: 1px solid #f5f5f5;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.select-option:hover {
+    background-color: #f8f9fa;
+}
+
+.select-option.selected {
+    background-color: #e3f2fd;
+    color: #007bff;
+}
+
+.close-select {
+    cursor: pointer;
+    color: #007bff;
+    font-size: 20px;
+}
+
+/* بطاقات التخصصات*/
+.category-card {
+    transition: all 0.3s;
+    background-color: white;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-light);
+}
+
+/* التذييل */
+.footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

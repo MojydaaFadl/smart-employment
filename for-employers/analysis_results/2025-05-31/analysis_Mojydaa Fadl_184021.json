@@ -1,0 +1,59 @@
+{
+  "candidate_info": {
+    "full_name": "Mojydaa Fadl",
+    "email": "mojydaafadl8@gmail.com",
+    "phone_number": "+967 771600772",
+    "location": "Ibb, Yemen"
+  },
+  "work_experience": [
+    {
+      "job_title": "Accountant",
+      "company_name": "somewhere",
+      "time_period": "2022-01 - 2023-03",
+      "duration_in_months": 14,
+      "key_achievements": [
+        "something ...!",
+        "something"
+      ],
+      "technologies_used": []
+    },
+    {
+      "job_title": "Project Management System",
+      "company_name": "somewhere",
+      "time_period": "2021-03 - 2022-05",
+      "duration_in_months": 14,
+      "key_achievements": [
+        "created a project management system",
+        "something ...!"
+      ],
+      "technologies_used": []
+    },
+    {
+      "job_title": "Not available",
+      "company_name": "somewhere",
+      "time_period": "2024-03 - Present",
+      "duration_in_months": "Not available",
+      "key_achievements": [
+        "something ...!"
+      ],
+      "technologies_used": []
+    }
+  ],
+  "skills_analysis": {
+    "python": "Intermediate",
+    "css": "Advanced",
+    "c#": "Advanced",
+    "web development": "Advanced"
+  },
+  "education": {
+    "degree": "Bachelor's Degree",
+    "institution": "Languages Al-Jazeera",
+    "graduation_year": "2025",
+    "field_of_study": "IT"
+  },
+  "summary": {
+    "analysis_summary": "Not available"
+  },
+  "cv_path": "../uploads/cvs/cv_6_1748313345.pdf",
+  "matching_score": 0
+}
